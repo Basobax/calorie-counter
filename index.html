@@ -11,6 +11,49 @@
       <h1>Calorie Counter</h1>
       <div class="container">
         <form id="calorie-counter">
+          <label>Weight</label>
+          <input type="number"
+          min="0"
+          max="400"
+          id="weight"
+          placeholder="Weight"
+          required/>
+          <label>Height</label>
+          <input type="number"
+          min="0"
+          max="300"
+          id="height"
+          placeholder="Cm"
+          required
+            />
+            <label>Age</label>
+          <input type="number"
+          min="0"
+          max="120"
+          id="age"
+          placeholder="Age"
+          required
+            />
+            <p>Please select your gender:</p>
+           <label class="radio-container">M
+          <input type="radio"
+          id="male"
+          name="gender"
+          value="male"
+          checked
+          required
+            />
+            <span class="checkmark"></span>
+          </label>
+            <label class="radio-container">F
+            <input type="radio"
+          id="female"
+          name="gender"
+          value="female"
+          label="Female"
+          required
+            />
+          <span class="checkmark"></span></label>
           <label for="budget">Budget</label>
           <input
             type="number"

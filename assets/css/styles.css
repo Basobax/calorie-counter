@@ -64,6 +64,67 @@ button:hover {
     color: var(--savoy);
  }
 
+ p{
+    display: block;
+    text-align: center;
+    margin: auto;
+    font-weight: bolder;
+    margin-bottom: 20px;
+ }
+
+ .radio-container {
+    display: inline-block;
+    position:relative;
+    padding-left: 35px;
+    margin: 15px;
+    cursor: pointer;
+    
+ }
+
+ .radio-container input{
+    position:absolute;
+    opacity:0;
+    cursor:pointer;
+    height:0;
+    width: 0;
+    
+ }
+
+ .checkmark {
+    position:absolute;
+    top:0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: var(--baby-powder);
+    border-radius: 50%;
+    transition: all 1.1s;
+ }
+
+ .radio-container input ~ .checkmark:hover {
+    background-color: var(--red);
+    scale: 1.3;
+ }
+
+ .checkmark:after  {
+    content: "";
+    position:absolute;
+    display:none;
+ }
+
+ .radio-container input:checked ~ .checkmark:after {
+    display:block;
+ }
+
+ .radio-container .checkmark:after {
+    top: 4px;
+    left: 4px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+ }
+
  fieldset,
  label,
  button,
