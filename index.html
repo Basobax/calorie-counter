@@ -4,13 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <title>Calorie Counter</title>
+    <title>BMR - TDEE - calorie Counter </title>
   </head>
   <body>
     <main>
       <h1>Calorie Counter</h1>
       <div class="container">
         <form id="calorie-counter">
+          <fieldset class="bmr-info">
           <label>Weight</label>
           <input type="number"
           min="0"
@@ -21,47 +22,100 @@
           <label>Height</label>
           <input type="number"
           min="0"
-          max="300"
+          max="250"
           id="height"
           placeholder="Cm"
           required
             />
             <label>Age</label>
           <input type="number"
-          min="0"
+          min="12"
           max="120"
           id="age"
           placeholder="Age"
           required
             />
-            <p>Please select your gender:</p>
-           <label class="radio-container">M
-          <input type="radio"
-          id="male"
-          name="gender"
-          value="male"
-          checked
-          required
-            />
-            <span class="checkmark"></span>
-          </label>
-            <label class="radio-container">F
-            <input type="radio"
-          id="female"
-          name="gender"
-          value="female"
-          label="Female"
-          required
-            />
-          <span class="checkmark"></span></label>
-          <label for="budget">Budget</label>
-          <input
-            type="number"
-            min="0"
-            id="budget"
-            placeholder="Daily calorie budget"
-            required
-          />
+            </fieldset>
+            <fieldset class="gender-option">
+          <legend>Select your gender</legend>
+            <div class="radio-option">
+              <input type="radio" id="male" name="gender" value="male" required />
+              <label class="gender-options" for="male">M</label>
+              <input type="radio" id="female" name="gender" value="female"  required />
+              <label class="gender-options" for="female">F</label>
+    
+  </div>
+</fieldset>
+
+
+
+
+
+<fieldset class="activity-level">
+  <legend>Select your activity level:</legend>
+
+  <div class="radio-option">
+    <input type="radio" id="sedentary" name="activity" value="1.2" required>
+    <label for="sedentary">
+      <h3>Sedentary</h3><br>
+      <p>Little or no exercise. E.g., desk job, no workouts.</p>
+    </label>
+  </div>
+
+  <div class="radio-option">
+    <input type="radio" id="lightly-active" name="activity" value="1.375">
+    <label for="lightly-active">
+      <h3>Lightly Active</h3><br>
+      <p>Light exercise 1-3 days/week. E.g., walking, casual cycling.</p>
+    </label>
+  </div>
+
+  <div class="radio-option">
+  <input type="radio" id="moderately-active" name="activity" value="1.55">
+  <label for="moderately-active">
+    <h3>Moderately Active </h3><br>
+    <p>Moderate exercise 3–5 days/week. E.g., regular gym training.</p>
+  </label>
+</div>
+
+<div class="radio-option">
+  <input type="radio" id="very-active" name="activity" value="1.725">
+  <label for="very-active">
+    <h3>Very Active </h3><br>
+    <p>Hard exercise 6–7 days/week. E.g., intense workouts or sports.</p>
+  </label>
+</div>
+
+<div class="radio-option">
+  <input type="radio" id="super-active" name="activity" value="1.9">
+  <label for="super-active">
+    <h3>Super Active </h3><br>
+    <p>Very intense physical job or twice-daily training.</p>
+  </label>
+</div>
+
+</fieldset>
+
+<fieldset class="fitness-goal">
+  <legend>Select your fitness goal</legend>
+  <div class="radio-option">
+  <input type="radio" id="bulk" name="fitness-goal" value="bulk">
+  <label for="bulk">
+    <h3>Bulk</h3>
+  </label>
+</div>
+<div class="radio-option">
+  <input type="radio" id="maintain" name="fitness-goal" value="maintain">
+  <label for="maintain">
+    <h3>Maintain</h3>
+  </label>
+  <div class="radio-option">
+  <input type="radio" id="cut" name="fitness-goal" value="cut">
+  <label for="cut">
+    <h3>Cut</h3>
+  </label>
+</fieldset>
+<h3 id="bmr-result"></h3>
           <fieldset id="breakfast">
             <legend>Breakfast</legend>
             <div class="input-container"></div>
